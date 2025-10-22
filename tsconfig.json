@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6",        // Modern JS for browser
+    "module": "ESNext",     // ES Modules for browser
+    "rootDir": "./src",     // source folder
+    "outDir": "./dist",     // output folder
+    "lib": ["ES6", "DOM"],  // browser + JS features
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"]
+}
