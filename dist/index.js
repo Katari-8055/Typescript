@@ -28,17 +28,23 @@ const obj1 = {
     age: 233,
 };
 console.log(obj);
-//==========================function==================//
-// type funcType = (a: number, b: number, c?: number) => number; //c is optional
-// const functi: funcType = (a, b, c) => {
-//     if (typeof c === 'undefined') return a + b;
-//     return a + b + c;
-// }
-// functi(2, 3);
-//-------Rest Oprater-------//
-// type funcType = (...m: number[]) => number[]; //c is optional
-// const functi: funcType = (...m) => {
-//     m.filter((value) => value > 2);
-//     return m;
-// }
-// functi(2, 3,23,45,77,5,1,9);
+const getData = (product) => {
+    // product.id = 456; //readonly property can't be changed
+    console.log(product);
+};
+const prod1 = {
+    name: "katari",
+    price: 233,
+    photo: "photo.jpg",
+    id: 123
+};
+getData(prod1);
+const mode = "dark"; //or "light" or "system"
+//==========================Classes==================//
+class Player {
+    constructor(height, weight) {
+        this.height = height;
+        this.weight = weight;
+    }
+}
+const player1 = new Player(180, 75);

@@ -73,3 +73,48 @@ console.log(obj);
 //     return m;
 // }
 // functi(2, 3,23,45,77,5,1,9);
+
+
+//==========================Function with object==================//
+
+interface Product {
+    name: string, 
+    price: number, 
+    photo?: string,
+    readonly id: number | string
+}
+
+type GetDataType = (product: Product)=> void;
+
+const getData:GetDataType = (product)=>{
+    // product.id = 456; //readonly property can't be changed
+    console.log(product);
+}
+
+const prod1:Product = {
+    name: "katari",
+    price: 233,
+    photo: "photo.jpg",
+    id: 123
+}
+
+getData(prod1);
+
+//==========================Union Type==================//
+
+type themeMdoe = "dark" | "light" | "system";
+const mode:themeMdoe = "dark"; //or "light" or "system"
+
+//==========================Classes==================//
+
+class Player{
+    height;
+    weight;
+    
+    constructor(height: number, weight: number){
+        this.height = height;
+        this.weight = weight;
+    }
+}
+
+const player1 = new Player(180, 75);
